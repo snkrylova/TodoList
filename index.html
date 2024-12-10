@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Easily and efficiently manage your tasks with our simple and user-friendly to-do list. Create, edit, and track your tasks to stay organized and productive every day. Enjoy a straightforward interface with deadline-setting capabilities and mark completed tasks. Try it now!"
+    />
+    <meta
+      name="keywords"
+      content="to-do list, task management, productivity app, organize tasks, create tasks, track tasks, deadlines, simple interface, personal organizer, todo app, goal setting, task tracker"
+    />
+    <title>TodoMVC: JavaScript Es6 Webpack</title>
+
+    <link
+      rel="shortcut icon"
+      href="assets/icons/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="heading" translate="no">todos</h1>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container main__container">
+        <section class="todo-app">
+          <header class="todo-app__header">
+            <input
+              type="text"
+              class="todo-app__input"
+              placeholder="What needs to be done?"
+              autofocus
+            />
+          </header>
+
+          <ul class="todo-app__list">
+            <li class="todo-app__item">
+              <label class="todo-app__custom-checkbox">
+                <input type="checkbox" class="todo-app__checkbox" />
+                <span class="todo-app__checkmark">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40"
+                    height="40"
+                    viewBox="-10 -18 100 135"
+                  >
+                    <circle
+                      class="unchecked"
+                      cx="50"
+                      cy="50"
+                      r="50"
+                      fill="none"
+                      stroke="#59A193"
+                      stroke-width="3"
+                    />
+                    <path
+                      class="checked"
+                      fill="#3EA390"
+                      d="M72 25L42 71 27 56l-4 4 20 20 34-52z"
+                    />
+                  </svg>
+                </span>
+                Выберите эту опцию
+              </label>
+            </li>
+          </ul>
+
+          <footer class="todo-app__footer hidden">
+            <p class="todo-app__count-todo"><span></span> items left</p>
+
+            <div class="todo-app__buttons">
+              <button class="todo-app__button">All</button
+              ><button class="todo-app__button">Active</button
+              ><button class="todo-app__button">Completed</button>
+            </div>
+
+            <button class="todo-app__button todo-app__button_clear-completed">
+              Clear completed
+            </button>
+          </footer>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <p class="footer__paragraph">Double-click to edit a todo</p>
+        <p class="footer__paragraph">Created by the TodoMVC Team</p>
+        <p class="footer__paragraph">
+          Part of
+          <a href="https://todomvc.com" class="footer__link" target="_blank"
+            >TodoMVC</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
