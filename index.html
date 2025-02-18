@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Easily and efficiently manage your tasks with our simple and user-friendly to-do list. Create, edit, and track your tasks to stay organized and productive every day. Enjoy a straightforward interface with deadline-setting capabilities and mark completed tasks. Try it now!"
+      content="Manage your tasks easily and efficiently with our user-friendly to-do list. Organize, track, and complete tasks with deadlines. Try it now!"
     />
     <meta
       name="keywords"
-      content="to-do list, task management, productivity app, organize tasks, create tasks, track tasks, deadlines, simple interface, personal organizer, todo app, goal setting, task tracker"
+      content="to-do list, task management, productivity app, organize tasks, track tasks, deadlines, personal organizer, goal setting"
     />
-    <title>TodoMVC: JavaScript Es6 Webpack</title>
+    <title>TodoMVC</title>
 
     <link
       rel="shortcut icon"
@@ -19,6 +19,8 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="style.css" />
+
+    <script src="script.js" defer></script>
   </head>
 
   <body>
@@ -31,57 +33,49 @@
     <main class="main">
       <div class="container main__container">
         <section class="todo-app">
+          <h2 class="sr-only">Start working with your to-do list</h2>
+
           <header class="todo-app__header">
+            <button
+              class="todo-app__button-toggle-all-tasks"
+              aria-label="Mark all tasks as completed or remove all marks"
+            ></button>
             <input
               type="text"
               class="todo-app__input"
               placeholder="What needs to be done?"
-              autofocus
+              aria-label="Add a new task"
             />
           </header>
 
-          <ul class="todo-app__list">
-            <li class="todo-app__item">
-              <label class="todo-app__custom-checkbox">
-                <input type="checkbox" class="todo-app__checkbox" />
-                <span class="todo-app__checkmark">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="40"
-                    height="40"
-                    viewBox="-10 -18 100 135"
-                  >
-                    <circle
-                      class="unchecked"
-                      cx="50"
-                      cy="50"
-                      r="50"
-                      fill="none"
-                      stroke="#59A193"
-                      stroke-width="3"
-                    />
-                    <path
-                      class="checked"
-                      fill="#3EA390"
-                      d="M72 25L42 71 27 56l-4 4 20 20 34-52z"
-                    />
-                  </svg>
-                </span>
-                Выберите эту опцию
-              </label>
-            </li>
-          </ul>
+          <ul class="todo-app__list" aria-live="polite"></ul>
 
-          <footer class="todo-app__footer hidden">
-            <p class="todo-app__count-todo"><span></span> items left</p>
+          <footer class="todo-app__footer">
+            <p class="todo-app__count-active-tasks" aria-live="polite"></p>
 
-            <div class="todo-app__buttons">
-              <button class="todo-app__button">All</button
-              ><button class="todo-app__button">Active</button
-              ><button class="todo-app__button">Completed</button>
+            <div class="todo-app__buttons-filters">
+              <button
+                class="todo-app__button todo-app__button_show-all"
+                aria-label="Show all tasks"
+              >
+                All</button
+              ><button
+                class="todo-app__button todo-app__button_show-active"
+                aria-label="Show active tasks"
+              >
+                Active</button
+              ><button
+                class="todo-app__button todo-app__button_show-completed"
+                aria-label="Show completed tasks"
+              >
+                Completed
+              </button>
             </div>
 
-            <button class="todo-app__button todo-app__button_clear-completed">
+            <button
+              class="todo-app__button todo-app__button_clear-completed"
+              aria-label="Clear all completed tasks"
+            >
               Clear completed
             </button>
           </footer>
@@ -95,13 +89,15 @@
         <p class="footer__paragraph">Created by the TodoMVC Team</p>
         <p class="footer__paragraph">
           Part of
-          <a href="https://todomvc.com" class="footer__link" target="_blank"
+          <a
+            href="https://todomvc.com"
+            class="footer__link"
+            target="_blank"
+            rel="noopener noreferrer"
             >TodoMVC</a
           >
         </p>
       </div>
     </footer>
-
-    <script src="script.js"></script>
   </body>
 </html>
