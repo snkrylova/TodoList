@@ -188,11 +188,11 @@ body {
   cursor: text;
 }
 
-.todo-app__item.editing .todo-app__button_clear {
+.todo-app__item.editing .todo-app__button-clear {
   display: none;
 }
 
-.todo-app__item.active .todo-app__button_clear {
+.todo-app__item.active .todo-app__button-clear {
   opacity: 1;
   pointer-events: auto;
 }
@@ -254,7 +254,7 @@ body {
   text-decoration: line-through;
 }
 
-.todo-app__button_clear {
+.todo-app__button-clear {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -274,7 +274,7 @@ body {
   transition: opacity 0.5s, color 0.5s;
 }
 
-.todo-app__button_clear::before {
+.todo-app__button-clear::before {
   width: 40px;
   height: 40px;
 
@@ -282,7 +282,7 @@ body {
   line-height: 40px;
 }
 
-.todo-app__button_clear.active {
+.todo-app__button-clear.active {
   color: var(--color-focus);
 }
 
@@ -370,8 +370,7 @@ body {
 .todo-app__item.focus,
 .todo-app__task-text:focus,
 .todo-app__button:focus,
-.todo-app__button_clear:focus, /* Точно надо для каждой отдельно? */
-.todo-app__button_clear-completed:focus, /* Точно надо для каждой отдельно? */
+.todo-app__button-clear:focus,
 .footer__link:focus {
   position: relative;
   z-index: 1;
@@ -412,7 +411,7 @@ body {
     border-color: var(--color-hover-button);
   }
 
-  .todo-app__button_clear:hover {
+  .todo-app__button-clear:hover {
     color: var(--color-focus);
   }
 
