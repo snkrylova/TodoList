@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Manage your tasks easily and efficiently with our user-friendly to-do list. Organize, track, and complete tasks with deadlines. Try it now!"
+    />
+    <meta
+      name="keywords"
+      content="to-do list, task management, productivity app, organize tasks, track tasks, deadlines, personal organizer, goal setting"
+    />
+    <title>TodoMVC</title>
+
+    <link
+      rel="shortcut icon"
+      href="assets/icons/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="heading" translate="no">todos</h1>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container main__container">
+        <section class="todo-app">
+          <h2 class="sr-only">Start working with your to-do list</h2>
+
+          <header class="todo-app__header">
+            <button
+              class="todo-app__button-toggle-all-tasks"
+              aria-label="Mark all tasks as completed or remove all marks"
+            ></button>
+            <input
+              type="text"
+              class="todo-app__input"
+              placeholder="What needs to be done?"
+              aria-label="Add a new task"
+            />
+          </header>
+
+          <ul class="todo-app__list" aria-live="polite"></ul>
+
+          <footer class="todo-app__footer">
+            <p class="todo-app__count-active-tasks" aria-live="polite"></p>
+
+            <div class="todo-app__buttons-filters">
+              <button
+                class="todo-app__button todo-app__button_show-all"
+                aria-label="Show all tasks"
+              >
+                All</button
+              ><button
+                class="todo-app__button todo-app__button_show-active"
+                aria-label="Show active tasks"
+              >
+                Active</button
+              ><button
+                class="todo-app__button todo-app__button_show-completed"
+                aria-label="Show completed tasks"
+              >
+                Completed
+              </button>
+            </div>
+
+            <button
+              class="todo-app__button todo-app__button_clear-completed"
+              aria-label="Clear all completed tasks"
+            >
+              Clear completed
+            </button>
+          </footer>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <p class="footer__paragraph">Double-click to edit a todo</p>
+        <p class="footer__paragraph">Created by the TodoMVC Team</p>
+        <p class="footer__paragraph">
+          Part of
+          <a
+            href="https://todomvc.com"
+            class="footer__link"
+            target="_blank"
+            rel="noopener noreferrer"
+            >TodoMVC</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
